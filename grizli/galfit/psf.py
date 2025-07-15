@@ -528,7 +528,7 @@ class DrizzlePSF(object):
                     adrizzle.do_driz(
                         psf,
                         psf_wcs,
-                        psf * 0 + flt_weight,
+                        (psf * 0 + flt_weight).astype(outwht.dtype),   
                         wcs_slice,
                         outsci,
                         outwht,
@@ -550,7 +550,7 @@ class DrizzlePSF(object):
                     adrizzle.do_driz(
                         psf,
                         psf_wcs,
-                        psf * 0 + flt_weight,
+                        # psf * 0 + flt_weight,
                         wcs_slice,
                         outsci,
                         outwht,
